@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", Init);
 function Init(){
 time = new Date();
 Start();
-Loop();
+
 }
 
 function loop(){
@@ -36,6 +36,8 @@ let score = 0;
 
 let parado = false;
 let saltando = false;
+
+let tiempoHasta
 
 let contenedor;
 let dino;
@@ -67,6 +69,7 @@ dino.classList.remove("dino-corriendo");
 }
 
 function Update(){
+
 MoverSuelo();
 MoverDinosaurio();
 
@@ -78,16 +81,17 @@ sueloX += CalcularDesplazamiento();
 suelo.style.left = -(sueloX % contenedor.clienteWidth) + "px";
 }
 
-function CalcularDesplazamiento(){
+function CalcularDesplazamiento() {
 return velEscenario * deltaTime * gameVel;
 }
 
-function MoverDinosaurio(){
+function MoverDinosaurio() {
   dinoPosY += velY * deltaTime;
- if (dinoPosY <sueloY){
-TocarSuelo();
+ if (dinoPosY < sueloY){
+      TocarSuelo();
 }
-  
+ dino.style.bottom = dinoPosY+"px";
+
 }
 
 function TocarSuelo(){
@@ -100,12 +104,4 @@ saltando = false;
 }
 
 
-function TocarSuelo(){
-dinoPosY = sueloY;
-velY = 0;
-if (saltando){
-dino.classList.add("dino-corriendo");
-}
-saltando = false;
 
-}
