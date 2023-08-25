@@ -52,7 +52,16 @@ dino = document.querySelector(".dino");
 }
 
 function Update(){
+MoverSuelo();
+}
 
+function MoverSuelo(){
+sueloX += CalcularDesplazamiento();
+suelo.style.left = -(sueloX % contenedor.clienteWidth) + "px";
+}
+
+function CalcularDesplazamiento(){
+return velEscenario * deltaTime * gameVel;
 }
 
 
