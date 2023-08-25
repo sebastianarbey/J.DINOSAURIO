@@ -1,11 +1,16 @@
 * {
     padding: 0;
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body{
     height: 100%;
+    width: 100%;
     background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/952e803f-f457-492b-bf38-4dd690776c9b.image.png?v=1692982511745) no-repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     display: flex;
     align-items: center;
 }
