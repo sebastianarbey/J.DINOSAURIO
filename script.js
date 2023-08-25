@@ -54,12 +54,23 @@ document.addEventListener("Keydown", HandleKeyDown);
 
 function HandleKeyDown(ev){
 if (ev.Keycode == 32){
-  sal
+  saltar();
+}
+}
+
+function saltar (){
+if (dinoPosY === sueloY) { 
+saltando = true;
+velY = impulso;
+dino.classList.remove("dino-corriendo"); 
 }
 }
 
 function Update(){
 MoverSuelo();
+MoverDinosaurio();
+
+  velY -= gravedad * deltaTime;
 }
 
 function MoverSuelo(){
@@ -71,6 +82,30 @@ function CalcularDesplazamiento(){
 return velEscenario * deltaTime * gameVel;
 }
 
+function MoverDinosaurio(){
+  dinoPosY += velY * deltaTime;
+ if (dinoPosY <sueloY){
+TocarSuelo();
+}
+  
+}
+
+function TocarSuelo(){
+dinoPosY = sueloY;
+velY = 0;
+if (saltando){
+dino.classList.add("dino-corriendo");
+}
+saltando = false;
+}
 
 
+function TocarSuelo(){
+dinoPosY = sueloY;
+velY = 0;
+if (saltando){
+dino.classList.add("dino-corriendo");
+}
+saltando = false;
 
+}
