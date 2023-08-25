@@ -49,6 +49,13 @@ suelo = document.querySelector(".suelo");
 contenedor = document.querySelector(".contenedor");
 textoScore = document.querySelector(".score");
 dino = document.querySelector(".dino");
+document.addEventListener("Keydown", HandleKeyDown);
+}
+
+function HandleKeyDown(ev){
+if (ev.Keycode == 32){
+  sal
+}
 }
 
 function Update(){
