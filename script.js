@@ -1,13 +1,10 @@
 
+var time = new Date();
+var deltaTime = 0;
 
-// Ejemplo de manejo de eventos para agregar productos al carrito
-const addToCartButtons = document.querySelectorAll('.add-to-cart');
+if (document.readyState === "complete" )
 
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', addToCart);
-});
 
-function addToCart() {
-    // Aquí puedes agregar la lógica para agregar productos al carrito
-    alert('Producto agregado al carrito');
-}
+
+
+
