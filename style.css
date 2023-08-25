@@ -20,5 +20,11 @@ background: linear-gradient(red,blue)
 width:84px;
 height:84px;
 position:absolute;
-bo
+bottom:22px;
+left:42px;
+z-index: 2;
+
+ background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/dino.png?v=1692967760491) repeat-x 0px 0px; 
+ background-size: 336px 84px;
+ background-position-x: 0px;
 }
