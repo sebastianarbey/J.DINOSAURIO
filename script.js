@@ -8,6 +8,15 @@ setTimeout(Init,1);
 document.addEventListener("DOMContentLoaded", Init);
 }
 
+function Init(){
+time = new Date();
+Start();
+Loop();
+}
+
+function loop(){
+deltaTime = (new Date() -time) /
+}
 
 
 
