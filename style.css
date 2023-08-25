@@ -1,85 +1,138 @@
-/* Estilos generales */
-body {
-    background-color:tomato;
-    font-family: Arial, sans-serif;
-    margin: 0;
+* {
     padding: 0;
-    display:flex;
-     align-items:center;
+    margin: 0;
 }
 
-.contenedor{
-width:920px;
-height:280px;
-margin: 0 auto;
-position:relative;
-background: linear-gradient(red,blue)
+body{
+    height: 100%;
+    background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/952e803f-f457-492b-bf38-4dd690776c9b.image.png?v=1692982511745) no-repeat;
+    display: flex;
+    align-items: center;
 }
 
-.dino{
-width:84px;
-height:84px;
-position:absolute;
-bottom:22px;
-left:42px;
-z-index: 2;
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    
+    position: relative;
 
- background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/dino.png?v=1692967760491) repeat-x 0px 0px; 
- background-size: 336px 84px;
- background-position-x: 0px;
+    background: linear-gradient(#b7d6c7, transparent) #ffe2d1;/*linear-gradient(#90ebff, white);*/
+    transition: background-color 1s linear;
+    overflow: hidden;
 }
 
-.dino-corriendo{
-    animation: animarDino 0.25s steps(2) infinite ;
+.mediodia {
+    background-color: #ffdcf3;
 }
 
-.dino-estrellado{
-background-position-x: -252px;
+.tarde {
+    background-color: #ffadad;
 }
 
-@keyframes animarDino{
-  from{
-background-position-x: -84px;
-  }
-  to{
-background-position-x: -252px;
-}
+.noche {
+    background-color: #aca8c7;
 }
 
-.suelo{
-width:200%;
-height:42px;
+.dino {
+    width: 84px;
+    height: 84px;
 
-position:absolute;
-bottom: 0;
-left:0;
-background: url() repeat-x 0px 0px;
-background-size: 50% 42px;
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/dino.png?v=1692967760491) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+
 }
 
-.score{
-width:100px;
-height:30px;
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
 
-position: absolute;
-top:5px;
-right:15px;
-z-index: 10;
-  color:orange;
-font-family: ;
-font-size:30px;
-font-weight:bold;
-text-align:right;
+.suelo {
+    width: 200%;
+    height: 42px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/suelo.png?v=1692982282728) repeat-x 0px 0px;
+    background-size: 50% 42px;
 
 }
 
 .cactus{
-width: 46;
-height: 96px;
+    width: 46px;
+    height: 96px;
 
-position: absolute;
-bottom: 16px;
-left :600px;
-z-index:1;
-background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/cactus2.png?v=1692981631582) no-repeat;
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/cactus1.png?v=1692982318470) no-repeat;
+}
+.cactus2{
+    width: 98px;
+    height: 66px;
+
+    background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/cactus2.png?v=1692981631582) no-repeat;
+}
+
+.nube{
+    width: 92px;
+    height: 26px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(img/nube.png) no-repeat;
+    background-size: 92px 26px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #d48871;
+    font-family: italic;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #7e928b;
+    font-size: 30px;
+    font-family: italic;
+    font-weight: 700;
+}
+
+@keyframes animarDino{
+    from{
+        background-position-x: -84px;
+    }
+    to{
+        background-position-x: -252px;
+    }
 }
