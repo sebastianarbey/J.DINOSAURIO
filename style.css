@@ -72,3 +72,14 @@ font-weight:bold;
 text-align:right;
 
 }
+
+.cactus{
+width: 46;
+height: 96px;
+
+position: absolute;
+bottom: 16px;
+left :600px;
+z-index:1;
+background: url(https://cdn.glitch.global/78a7d615-ac67-4d48-bae0-e4977d6243c8/cactus2.png?v=1692981631582) no-repeat;
+}
