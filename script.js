@@ -48,7 +48,7 @@ gameOver = document.querySelector(".game-over");
 suelo = document.querySelector(".suelo");
 contenedor = document.querySelector(".contenedor");
 textoScore = document.querySelector(".score");
-dino = document.querySelector(".game-over");
+dino = document.querySelector(".dino");
 }
 
 function Update(){
